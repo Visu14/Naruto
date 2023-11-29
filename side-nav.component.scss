@@ -1,0 +1,917 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;600;700&display=swap");
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+
+  // Side bar code begins
+
+  .sidebar {
+    width: 16.2rem;
+    height: 100vh;
+    position: fixed;
+
+    .side-bar {
+      position: fixed;
+      padding: 4px;
+      width: 260px;
+      height: 100%;
+      background: #07080be6;
+      display: flex;
+      flex-direction: column;
+      .css-battle-title {
+        display: flex;
+        padding: 16px 32px;
+        .battle-title {
+          display: inline-block;
+          font-family: "IBM Plex Mono", monospace;
+          font-size: 20px;
+          // height: 18px;
+          // width: 140px;
+          color: #ffdf00;
+          font-weight: bold;
+        }
+      }
+      .home-title {
+        margin-top: 16px;
+        padding-left: 32px;
+      }
+      .home-style {
+        padding: 0.5rem 0;
+        margin: 0.2rem 0;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        font-size: 16px;
+        font-family: "Clash Grotesk", sans-serif;
+        font-weight: 500;
+        background: linear-gradient(
+          95.67deg,
+          rgb(53, 63, 73) 0,
+          rgba(53, 63, 73, 0) 92.54%
+        );
+        border-radius: 32px 0 0 32px;
+        :hover svg {
+          transform: scale(1.3);
+        }
+      }
+      .play-title {
+        margin-top: 16px;
+        padding-left: 45px;
+        margin-bottom: 12px;
+        background: #101217;
+        color: #95a7bc;
+        font-size: 14px;
+        font-family: "IBM Plex Mono", monospace;
+        font-weight: bold;
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+      .daily-target-title {
+        margin-top: 16px;
+        padding-left: 45px;
+        :hover {
+          text-decoration: none;
+          color: #fff;
+          background: none;
+        }
+      }
+      .daily-target-style {
+        padding: 0.5rem 0;
+        margin: 0.2rem 0;
+        color: #95a7bc;
+        font-size: 16px;
+        font-family: "Clash Grotesk", sans-serif;
+        :hover svg {
+          transform: scale(1.3);
+        }
+      }
+      .bottom-menu-list {
+        margin-top: 16px;
+        padding-left: 32px;
+      }
+      .upgrade-title {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 20px;
+        color: #fff;
+        font-family: "Clash Grotesk", sans-serif;
+        letter-spacing: 0.2px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 12px 16px;
+      }
+
+      @keyframes spin {
+        from {
+          transform: translate(-50%, -50%) rotate(0);
+        }
+        to {
+          transform: translate(-50%, -50%) rotate(360deg);
+        }
+      }
+      .rotating-border {
+        --border-radius: 40px;
+        --border-size: 0.1px;
+        --border-bg: conic-gradient(rgba(225, 233, 0, 0), rgba(225, 233, 0, 8));
+
+        overflow: hidden;
+        font-size: 16px;
+        padding: 10px;
+        border-radius: 45px;
+        display: inline-block;
+
+        &::before {
+          content: "";
+          display: block;
+          background: var(--border-bg);
+          width: 140px;
+          padding-bottom: 200px;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          border-radius: 45px;
+          z-index: -2;
+          animation: spin 6s linear infinite;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          inset: var(--border-size);
+          background: black;
+          z-index: -1;
+          border-radius: 45px;
+        }
+      }
+
+      .rotating-border--google {
+        --border-radius: 45px;
+        --border-size: 0.3px;
+        --border-bg: conic-gradient(
+          rgba(225, 233, 0, 0) 0turn 0.125turn,
+          rgba(225, 233, 0, 8) 0.875turn 1turn
+        );
+
+        letter-spacing: 0.1em;
+      }
+      .plus-title {
+        background-color: yellow;
+        color: black;
+        padding: 4px;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-family: "IBM Plex Mono", monospace;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .main-wrap {
+  
+    .content-wrap {
+
+   //    Header Code begins
+      
+    .content-header {
+      padding: 16px 11px 16px 11px;
+      background: linear-gradient(to right,rgb(24,29,35) 50%,transparent);
+      .sign-in-title {
+        display: flex;
+        justify-content: flex-end;
+        .online-title {
+          color: #cbd1e1;
+          font-family: "Clash Grotesk", sans-serif;
+          font-weight: 1000;
+          margin-right: 3px;
+          margin-top: 10px;
+        }
+        .online-title1 {
+          color: #6b7b8e;
+          font-family: "Clash Grotesk", sans-serif;
+          font-weight: 600;
+          margin-right: 18px;
+          margin-top: 10px;
+        }
+        .sun-title {
+          border: 0;
+          border-radius: 40px;
+          background-color: #323f4a;
+          width: 2.5rem;
+          height: 2.5rem;
+          margin-right: 20px;
+        }
+        .sign-title {
+          border-radius: 40px;
+          background: #323f4a;
+          color: white;
+          padding: 9.6px 14.4px;
+          border: none;
+          font-weight: 600;
+          letter-spacing: 0.2px;
+          font-family: "Clash Grotesk", sans-serif;
+          font-size: 16px;
+        }
+
+        .circle {
+          width: 9.6px;
+          height: 9.6px;
+          border-radius: 30px;
+          background: #ffdf00;
+          margin-right: 8px;
+          margin-top: 15px;
+        }
+
+        .pulse {
+          animation: pulse-animation 2s infinite;
+        }
+
+        @keyframes pulse-animation {
+          0% {
+            transform: scale(0.75);
+            box-shadow: 0 0 0 0 rgba(225, 223, 0, 0.7);
+          }
+          70% {
+            transform: scale(1);
+            box-shadow: 0 0 0 3px rgba(225, 223, 0, 0.7);
+          }
+          1000% {
+            transform: scale(0.75);
+            box-shadow: 0 0 0 0 rgba(225, 223, 0, 0.7);
+          }
+        }
+      }
+    }
+      position: relative;
+      margin-left: 260px;
+      background-color: #07080b;
+
+     //   Content-code begins
+
+      .content-inner-wrap {
+        margin: 0;
+        min-height: calc(100vh - 60px - 40px);
+        background-color: #07080b;
+        padding: 48px 48px 0 48px;
+      }
+
+      .welcome-title {
+        display: flex;
+        gap: 3rem;
+        margin-bottom: 48px;
+      }
+
+      .welcome-title1 {
+        letter-spacing: 0px;
+        font-size: 32px;
+        font-family: "Clash Grotesk", sans-serif;
+        font-weight: 600;
+        text-align: left;
+        line-height: 1.4;
+        font-style: normal;
+        color: #eff5fb;
+        margin-bottom: 10px;
+        margin-top: 10px;
+      }
+      .target-title {
+        letter-spacing: 0px;
+        font-size: 18px;
+        font-family: "Clash Grotesk", sans-serif;
+        font-weight: 500;
+        text-align: left;
+        line-height: 1.4;
+        font-style: normal;
+        color: #a0b3c6;
+        margin-bottom: 25px;
+      }
+      .button {
+        padding: 0.6rem 0.9rem;
+        border: 0;
+        border-radius: 40px;
+        background-color: #0060ca;
+        color: #fff;
+        font-weight: 700;
+        cursor: pointer;
+        line-height: 1.2;
+        font-family: ClashGrotesk;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+        text-align: left;
+      }
+      .seperator {
+        width: 100%;
+        height: 1px;
+        background: #27313a;
+      }
+      .targets-title {
+        margin-top: 48px;
+        display: flex;
+        margin-bottom: 24px;
+        justify-content: space-between;
+      }
+      .targets-title-1 {
+        display: flex;
+        gap: 1rem;
+      }
+      .first-image {
+        height: 3.5rem;
+        width: 3.5rem;
+        border-radius: 50%;
+        background: #20262e;
+        text-align: center;
+        line-height: 4.3rem;
+      }
+      .first-target-titles1 {
+        letter-spacing: 0px;
+        font-size: 24px;
+        font-family: "Clash Grotesk", sans-serif;
+        font-weight: 600;
+        text-align: left;
+        line-height: 1.4;
+        font-style: normal;
+        color: #eff5fb;
+        margin-top: 0px;
+        margin-bottom: 5px;
+      }
+      .new-target {
+        letter-spacing: 0.3px;
+        font-size: 16px;
+        font-family: "Clash Grotesk", sans-serif;
+        font-weight: 500;
+        text-align: left;
+        line-height: 1.5;
+        font-style: normal;
+        color: #a0b3cc;
+      }
+      .targets-title-2 {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+      .button-primary {
+        padding: 0.6rem 0.9rem;
+        border: 0;
+        border-radius: 40px;
+        background-color: #323f4a;
+        text-decoration: none;
+        font-weight: 700;
+        cursor: pointer;
+        line-height: 1.2;
+        font-family: "Clash Grotesk", sans-serif;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+        text-align: left;
+        color: rgb(255, 255, 255);
+      }
+      .game-title {
+        position: relative;
+        background: linear-gradient(
+          94.5deg,
+          rgba(29, 35, 43, 0.75) 0.19%,
+          rgba(24, 29, 35, 0.563)
+        );
+        box-shadow: 0 0 30px rgba(225, 223, 0, 0),
+          0px 20px 50px rgba(0, 0, 0, 0.2),
+          inset 1px 1px 3px hsla(0, 0%, 100%, 0.1);
+        border-radius: 1rem;
+        overflow: hidden;
+      }
+      .game-header {
+        display: flex;
+        overflow-x: auto;
+        min-height: 415px;
+        width: 100%;
+        padding: 2rem;
+        gap: 2rem;
+      }
+      .play-card {
+        display: flex;
+        gap: 2rem;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: row;
+      }
+      .play-card-header {
+        display: flex;
+        flex-direction: column;
+        :hover {
+          transform: scale(0.9);
+        }
+      }
+      .play-card-header1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
+      }
+      .date-header {
+        font-size: 14px;
+        padding: 0.2rem 0.5rem;
+        background: #2d363f;
+        border-radius: 4px;
+        white-space: nowrap;
+        color: #fff;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+      .game-image {
+        width: 240px;
+        background: transparent;
+        box-shadow: none;
+        border: 2px solid #27313a;
+        border-radius: 16px;
+        padding: 9.6px;
+      }
+      .today {
+        box-shadow: 0 0 30px rgba(225, 223, 0, 0.3), 0 0 0 2px #ffdf00,
+          0px 10px 50px rgba(0, 0, 0, 0.5);
+        width: 320px;
+      }
+      .target-images {
+        display: block;
+        width: 100%;
+        border-radius: 5px 5px 0 0;
+        border: 3px solid #111217;
+      }
+      .high-score-title {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+      }
+      .lock-timer-title {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+      }
+      .high-score-header {
+        font-size: 16px;
+      }
+      .hi-score-title {
+        margin-top: 0;
+        margin-bottom: 2px;
+        font-family: "Clash Grotesk", sans-serif;
+        font-weight: 500;
+        color: #6b7b8e;
+      }
+      .player-count-title {
+        font-family: "IBM Plex Mono", monospace;
+        font-weight: 600;
+        color: #a0b3cc;
+      }
+      .plus-title {
+        background-color: yellow;
+        color: black;
+        padding: 2px;
+        text-transform: uppercase;
+        font-size: 10px;
+        font-family: "IBM Plex Mono", monospace;
+        font-weight: bold;
+        /* border-radius: 10px; */
+        height: 20px;
+        width: 30px;
+        align-items: center;
+        text-align: center;
+        margin-top: 10px;
+      }
+      .book-title {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 12px;
+        border: 0;
+        border-radius: 40px;
+        box-shadow: inset 1px 1px 2px hsla(0, 0%, 100%, 0.1);
+        background-color: #323f4a;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 700;
+        cursor: pointer;
+        transition: 0.2s ease;
+        line-height: 1.2;
+        font-family: "Clash Grotesk", sans-serif;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+      }
+      .lock-image {
+        position: absolute;
+        top: 30%;
+        left: 45%;
+      }
+
+      .new-timer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2px;
+      }
+      .timer-count-1 {
+        display: flex;
+      }
+      .count-1 {
+        box-shadow: 0 10px 5px -5px rgba(0, 0, 0, 0.2);
+        width: 20px;
+        height: 30px;
+        line-height: calc(275px * 0.1);
+        margin: 0 2px;
+        perspective: 500px;
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        background: rgb(39, 42, 52);
+        color: #91a7be;
+        font-size: calc(11rem * 0.1);
+        border-radius: 8px;
+      }
+
+      .seperators {
+        opacity: 1;
+        color: #91a7be;
+        font-size: calc(11rem * 0.1);
+      }
+
+      .content-title3 {
+        opacity: 1;
+        margin-top: 48px;
+        margin-bottom: 48px;
+      }
+      .ticket-wrapper {
+        position: relative;
+        white-space: nowrap;
+        max-width: 100%;
+        overflow: hidden;
+      }
+
+      .ticker-inner {
+        display: flex;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+        -webkit-animation-name: ticker;
+        animation-name: ticker;
+        -webkit-animation-duration: 30s;
+        animation-duration: 30s;
+      }
+      .moving {
+      
+      }
+      @-webkit-keyframes ticker {
+        0% {
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+          visibility: visible;
+        }
+        100% {
+          -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0);
+        }
+      }
+      @keyframes ticker {
+        0% {
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+          visibility: visible;
+        }
+        100% {
+          -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0);
+        }
+      }
+      .ticker-1 {
+        display: flex;
+        margin-right: 20px;
+      }
+      .ticker-element {
+        padding: 0.5rem 1rem 0.5rem 0.5rem;
+        width: auto;
+        height: auto;
+        background: none;
+        box-shadow: none;
+        backdrop-filter: none;
+        border: 2px solid #20262e;
+        border-radius: 20px;
+      }
+      .ticker-stack {
+        display: flex;
+      }
+      .ticker-image {
+        object-fit: cover;
+        opacity: 0.8;
+      }
+      .ticker-name {
+        letter-spacing: 0px;
+        font-size: 14px;
+        font-family: "Clash Grotesk", sans-serif;
+        font-weight: 500;
+        text-align: left;
+        line-height: 1.4;
+        font-style: normal;
+        color: #fff;
+        margin: 0 5px 0 10px;
+        &:hover {
+          text-decoration: underline;
+          color: #fff;
+        }
+      }
+      .ticker-record {
+        letter-spacing: 0px;
+        font-size: 14px;
+        font-family: "Clash Grotesk", sans-serif;
+        font-weight: 500;
+        text-align: left;
+        line-height: 1.4;
+        font-style: normal;
+        color: #a0b3c6;
+        margin-right: 5px;
+      }
+      .ticker-count {
+        color: #fff;
+        margin-right: 5px;
+        &:hover {
+          text-decoration: underline;
+          color: #fff;
+        }
+      }
+      .ticker-chare {
+        letter-spacing: 0px;
+        font-size: 14px;
+        font-family: "Clash Grotesk", sans-serif;
+        font-weight: 500;
+        text-align: left;
+        line-height: 1.4;
+        font-style: normal;
+        color: #a0b3c6;
+        margin-right: 10px;
+      }
+      .ticker-days {
+        letter-spacing: 0px;
+        font-size: 14px;
+        font-family: "Clash Grotesk", sans-serif;
+        font-weight: 500;
+        text-align: left;
+        line-height: 1.4;
+        font-style: normal;
+        color: #6b7b8e;
+      }
+      .sponsor-adverse {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+      .sponsor-name {
+        letter-spacing: 0px;
+        font-size: 24px;
+        font-family: "Clash Grotesk", sans-serif;
+        font-weight: 600;
+        text-align: left;
+        line-height: 1.4;
+        font-style: normal;
+        color: #eff5fb;
+        margin: 0;
+      }
+      .bytes-title {
+        background: none;
+        box-shadow: none;
+        backdrop-filter: none;
+        border: 2px solid #20262e;
+        padding: 1rem;
+        width: auto;
+        height: auto;
+        border-radius: 16px;
+      }
+      .bytes-image {
+        width: 100%;
+        border-radius: 8px;
+      }
+      .content-title5 {
+        margin-bottom: 40px;
+      }
+      .leader-title {
+        padding: 32px;
+        width: auto;
+        height: auto;
+        position: relative;
+        background: linear-gradient(
+          94.5deg,
+          rgba(29, 35, 43, 0.75) 0.19%,
+          rgba(24, 29, 35, 0.563)
+        );
+        box-shadow: 0 0 30px rgba(225, 223, 0, 0),
+          0px 20px 50px rgba(0, 0, 0, 0.2),
+          inset 1px 1px 3px hsla(0, 0%, 100%, 0.1);
+        border-radius: 16px;
+        backdrop-filter: blur(20px);
+        overflow: hidden;
+        display: flex;
+      }
+      .leader-elements {
+        display: flex;
+        gap: 3rem;
+      }
+      .leader-elements1 {
+        flex-shrink: 0;
+        flex-basis: 33ch;
+      }
+      .batch-new-logos {
+        display: flex;
+        justify-content: stretch;
+        align-items: stretch;
+        width: 100%;
+        gap: 0.5rem;
+      }
+      .leader-logo {
+        display: flex;
+        align-items: center;
+        padding: 9.6px 12.8px;
+        gap: 0.5rem;
+        border: 0;
+        border-radius: 40px;
+        box-shadow: inset 1px 1px 2px hsla(0, 0%, 100%, 0.1);
+        background-color: #323f4a;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 700;
+        cursor: pointer;
+        line-height: 1.2;
+        font-family: "Clash Grotesk", sans-serif;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+        text-align: left;
+      }
+      .button-sec {
+        background-color: #0060ca;
+        color: #fff;
+        padding: 9.6px 12.8px;
+        flex-grow: 1;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        border: 0;
+        border-radius: 40px;
+        box-shadow: inset 1px 1px 2px hsla(0, 0%, 100%, 0.1);
+        text-decoration: none;
+        font-weight: 700;
+        cursor: pointer;
+        line-height: 1.2;
+        font-family: "Clash Grotesk", sans-serif;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+        text-align: left;
+      }
+      .image-ava-1 {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+      }
+      .battle-headers {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 20px;
+      }
+      .finished-header {
+        font-size: 14px;
+        padding: 3.2px 8px;
+        box-shadow: inset 1px 1px 2px hsla(0, 0%, 100%, 0.1);
+        border-radius: 4px;
+        white-space: nowrap;
+        text-transform: uppercase;
+        font-weight: 500;
+        background: #a3483d;
+        color: #fff;
+      }
+      .golf-header {
+        font-size: 14px;
+        padding: 3.2px 8px;
+        background: #2d363f;
+        box-shadow: inset 1px 1px 2px hsla(0, 0%, 100%, 0.1);
+        border-radius: 4px;
+        white-space: nowrap;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+      .golf-emo {
+        font-size: 12px;
+        margin-right: 4px;
+      }
+      .revert-header {
+        margin-bottom: 20px;
+      }
+      .revert-battle {
+        letter-spacing: 0px;
+        font-size: 18px;
+        font-family: "Clash Grotesk", sans-serif;
+        font-weight: 600;
+        text-align: left;
+        line-height: 1.4;
+        font-style: normal;
+        color: #eff5fb;
+        &:hover {
+          text-decoration: underline;
+          color: #fff;
+        }
+      }
+      .revert-text {
+        letter-spacing: 0.3px;
+        font-size: 15px;
+        font-family: "Clash Grotesk", sans-serif;
+        font-weight: 500;
+        text-align: left;
+        line-height: 1.4;
+        font-style: normal;
+        color: #a0b3c6;
+        margin-bottom: 20px;
+      }
+     
+      .revert-finished {
+        letter-spacing: 0.3px;
+        font-size: 16px;
+        font-family: "Clash Grotesk", sans-serif;
+        font-weight: 500;
+        text-align: left;
+        line-height: 1.4;
+        font-style: normal;
+        color: #6b7b8e;
+        margin-top: 20px;
+        margin-bottom: 60px;
+      }
+      .batch-new-title2 {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(22%, 1fr));
+        grid-template-rows: max-content;
+        gap: 1rem;
+        width: 100%;
+      }
+      .avatar-inner-image {
+        height: auto;
+        max-width: 100%;
+        border-radius: 8px;
+      }
+      .avatar-count{
+        top: 40px;
+        position: absolute;
+      }
+      .avatar-count1 {
+        color: #fff;
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 4px;
+        padding: 0.2rem 0.5rem;
+        line-height: 1.2;
+        font-weight: 600;
+        font-size: 14px;
+        display: inline-flex;
+        align-self: center;
+        align-items: center;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  //   Footer code begins
+
+  .footer {
+    display: flex;
+    border: 1px solid #20262e;
+    background: rgba(24, 29, 35, 75);
+    .footer-title {
+      display: flex;
+      padding: 0 1.25rem;
+      min-height: 40px;
+      align-items: center;
+      font-family: "Clash Grotesk", sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      color: #6b7b8e;
+    }
+    .footer-title1 {
+      display: flex;
+      color: #fff;
+      align-items: center;
+      gap: 1.25rem;
+      justify-content: flex-end;
+      flex-direction: row;
+      flex-grow: 1;
+      font-family: "IBM Plex Mono", monospace;
+      font-weight: bold;
+      font-size: 16px;
+      padding: 0 1.25rem 0 0;
+     
+    }
+    .tip1{
+      &:hover {
+        text-decoration: underline;
+        color: #fff;
+      }
+    }
+  }
+}
